@@ -14,6 +14,8 @@ const globalStyles = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu;
     font-size: 14px;
     background-color: rgba(20, 20, 20, 1);
+    padding-top: 80px;
+    color: white;
   }
 `;
 
