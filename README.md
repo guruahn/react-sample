@@ -25,3 +25,4 @@ Learning React and ES6 by building a Movie Discovery
 - [ ] Tabs inside of Movie (YT Videos, Production Company & Contries)
 - [x] Collections Link
 - [x] Collections Route
+- [ ] On TV Show, show seasons
