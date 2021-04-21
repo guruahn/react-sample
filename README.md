@@ -18,3 +18,10 @@ Learning React and ES6 by building a Movie Discovery
 - [x] TV Show Detail
 - [x] Movie Detail
 - [x] Search (Movie, TV)
+
+## Code Challenges
+
+- [x] IMDB Link
+- [ ] Tabs inside of Movie (YT Videos, Production Company & Contries)
+- [x] Collections Link
+- [x] Collections Route

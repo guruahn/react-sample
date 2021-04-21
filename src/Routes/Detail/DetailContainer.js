@@ -1,6 +1,6 @@
 import React from "react";
 import DetailPresenter from "./DetailPresenter";
-import { movieApi, tvApi } from "api";
+import { movieApi, tvApi, collectionApi } from "api";
 
 
 export default class extends React.Component {
@@ -12,6 +12,7 @@ export default class extends React.Component {
       error: null,
       loading: true,
       isMovie: pathname.includes("/movie/"),
+      isShow: pathname.includes("/show/")
     };
   }
 
@@ -22,17 +23,18 @@ export default class extends React.Component {
       history: { push },
       location: {pathname}
     } = this.props;
-    const { isMovie } = this.state;
+    const { isMovie, isShow } = this.state;
     const parsedId = parseInt(id);
     if(isNaN(parsedId)) return push("/");
     let result;
     try {
       if(isMovie) {
         ({data: result} = await movieApi.movieDetail(parsedId));
-      }else{
+      }else if(isShow){
         ({ data: result } = await tvApi.showDetail(parsedId));
+      }else{
+        ({ data: result } = await collectionApi.showDetail(parsedId));
       }
-console.log(result)
     } catch (error) {
       this.setState({error: "Can't find movie", result})
     }finally{
@@ -41,8 +43,6 @@ console.log(result)
 
   }
   render() {
-
-console.log(this.state)
     const { result, error, loading } = this.state;
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }

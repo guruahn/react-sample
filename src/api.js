@@ -36,3 +36,10 @@ export const tvApi = {
       params: { query: encodeURIComponent(term) },
     }),
 };
+
+export const collectionApi = {
+  showDetail: (id) =>
+    api.get(`collection/${id}`, {
+      params: { append_to_response: "videos" },
+    }),
+};
