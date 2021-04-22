@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import Home from "Routes/Home";
 import TV from "Routes/TV";
 import Search from "Routes/Search";
@@ -7,7 +7,7 @@ import Detail from "Routes/Detail";
 import Collection from "Routes/Collection"; 
 import Header from "Components/Header";
 
-export default () => (
+const MyRouter = () => (
   <Router>
     <>
       <Header />
@@ -24,3 +24,5 @@ export default () => (
     </>
   </Router>
 );
+
+export default MyRouter

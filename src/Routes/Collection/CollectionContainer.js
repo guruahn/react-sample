@@ -2,12 +2,9 @@ import React from "react";
 import CollectionPresenter from "./CollectionPresenter";
 import { collectionApi } from "api";
 
-export default class extends React.Component {
+class CollectionContainer extends React.Component {
   constructor(props) {
     super(props);
-    const {
-      location: { pathname },
-    } = props;
     this.state = {
       result: null,
       error: null,
@@ -21,7 +18,6 @@ export default class extends React.Component {
         params: { id },
       },
       history: { push },
-      location: { pathname },
     } = this.props;
     const parsedId = parseInt(id);
     if (isNaN(parsedId)) return push("/");
@@ -40,3 +36,4 @@ export default class extends React.Component {
     return <CollectionPresenter result={result} error={error} loading={loading} />;
   }
 }
+export default CollectionContainer

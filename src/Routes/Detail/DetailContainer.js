@@ -3,7 +3,7 @@ import DetailPresenter from "./DetailPresenter";
 import { movieApi, tvApi, collectionApi } from "api";
 
 
-export default class extends React.Component {
+class DetailContainer extends React.Component {
   constructor(props){
     super(props);
     const {location: {pathname}} = props;
@@ -20,8 +20,7 @@ export default class extends React.Component {
   async componentDidMount(){
     const {
       match: { params: {id} },
-      history: { push },
-      location: {pathname}
+      history: { push }
     } = this.props;
     const { isMovie, isShow } = this.state;
     const parsedId = parseInt(id);
@@ -47,3 +46,4 @@ export default class extends React.Component {
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }
+export default DetailContainer

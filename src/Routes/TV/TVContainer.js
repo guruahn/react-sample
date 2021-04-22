@@ -1,8 +1,8 @@
 import React from "react";
 import TVPresenter from "./TVPresenter";
-import { movieApi, tvApi } from "api"
+import { tvApi } from "api"
 
-export default class extends React.Component {
+class TVContainer extends React.Component {
   state = {
     topRated: null,
     airingToday: null,
@@ -38,3 +38,4 @@ console.log(this.state)
     );
   }
 }
+export default TVContainer

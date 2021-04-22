@@ -2,7 +2,7 @@ import React from "react";
 import HomePresenter from "./HomePresenter";
 import { movieApi } from "api"
 
-export default class extends React.Component{
+class HomeContainer extends React.Component{
   state = {
     nowPlaying: null,
     upcoming: null,
@@ -35,3 +35,4 @@ export default class extends React.Component{
     return <HomePresenter nowPlaying={nowPlaying} upcoming={upcoming} popular={popular} error={error} loading={loading} ></HomePresenter>
   }
 }
+export default HomeContainer

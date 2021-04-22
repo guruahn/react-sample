@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Loader = () => (
   <Container>
-    <span role="img" aria-lable="Loading">⏰</span>
+    <span role="img" aria-label="Loading">⏰</span>
   </Container>
 );
 

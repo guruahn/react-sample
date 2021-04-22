@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Loader from "Components/Loader";
-import { Link } from "react-router-dom";
 import Poster from "Components/Poster";
 
 const Container = styled.div`

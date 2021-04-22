@@ -133,6 +133,7 @@ const DetailPresenter = ({ result, loading, error, isMovie }) => (
                 <a
                   href={`https://www.imdb.com/title/${result.imdb_id}`}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   IMDb
                 </a>
