@@ -26,7 +26,7 @@
     "deploy": "gh-pages -d build",
     "predeploy": "yarn run build"
   },
-  "homepage": "https://guruahn.github.io/react-sample/",
+  "homepage": "https://sad-hopper-8776c9.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
