@@ -26,3 +26,7 @@ Learning React and ES6 by building a Movie Discovery
 - [x] Collections Link
 - [x] Collections Route
 - [ ] On TV Show, show seasons
+
+## Preview
+
+Try it on [Netlify](https://sad-hopper-8776c9.netlify.app/#/) 
